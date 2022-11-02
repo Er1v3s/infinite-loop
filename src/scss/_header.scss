@@ -1,6 +1,6 @@
 .header {
     height: 100vh;
-    min-height: 450px;
+    min-height: 320px;
     position: relative;
     background-color: $base-background-color;
     background-image: url("../assets/infinite-loop-01.jpg");
@@ -132,6 +132,7 @@
 
                 & > * {
                     display: block;
+                    cursor: auto;
                 }
             }
         }
@@ -151,6 +152,10 @@
         &:hover {
             padding: $base-margin * 2 $base-margin * 5;
             background-color: $base-blue-color;
+        }
+
+        @media (orientation: landscape) {
+            bottom: 5%;
         }
     }
 }
