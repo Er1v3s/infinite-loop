@@ -1,0 +1,156 @@
+.header {
+    height: 100vh;
+    min-height: 450px;
+    position: relative;
+    background-color: $base-background-color;
+    background-image: url("../assets/infinite-loop-01.jpg");
+    background-position: center;
+    background-size: auto;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: 700;
+    color: white;
+
+    @include mq(xxxlarge) {
+        background-size: cover;
+    }
+
+    &__nav {
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+        position: fixed;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: $page-max-width;
+        padding: $base-margin;
+
+        @include mq(large) {
+            flex-wrap: nowrap;
+        }
+
+        .nav__headtext {
+            flex-shrink: 0;
+            padding: $base-margin * 1.5;
+            font-size: $base-font-size * 1.1;
+            @include subtelHov;
+
+            @include mq(xlarge) {
+                padding: $base-margin * 2;
+            }
+        }
+
+        .nav__headtext:hover {
+            color: $base-blue-color;
+        }
+
+        .nav__options {
+            display: none;
+            order: 3;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+            border-radius: 1%;
+            margin-top: 1%;
+            color: #333;
+            text-align: right;
+            font-weight: 100;
+
+            &-option {
+                padding: $base-margin * 1.5 $base-margin * 2;
+                @include subtelHov;
+
+                @include mq(large) {
+                    padding: $base-margin * 1.5;
+                }
+
+                @include mq(xlarge) {
+                    padding: $base-margin * 2 $base-margin * 3;
+                }
+            }
+            &-option:hover {
+                background-color: darken($base-blue-color, 15%);
+            }
+
+            @include mq(large) {
+                display: flex;
+                flex-grow: 1;
+                justify-content: flex-end;
+                order: 0;
+                margin-top: 0;
+                background: transparent;
+                color: white;
+            }
+        }
+
+        .active {
+            display: block;
+            transform-origin: top;
+            animation: menuEntry 0.3s linear;
+
+            @include mq(large) {
+                display: flex;
+            }
+        }
+
+        .nav__burger--mobile {
+            padding: $base-margin $base-margin * 2;
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 10%;
+            @include subtelHov;
+
+            @include mq(large) {
+                display: none;
+            }
+        }
+    }
+
+    &__text-center {
+        display: flex;
+        height: 100%;
+        flex-flow: wrap column;
+        justify-content: center;
+
+        .text-container {
+            text-align: center;
+            font-weight: 100;
+            text-shadow: 2px 2px 2px #333;
+
+            .text-container__head {
+                font-size: 60px;
+                padding: $base-margin;
+            }
+
+            .text-container__body {
+                line-height: $base-margin * 3.5;
+                padding: $base-margin;
+
+                & > * {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__nav-arrow {
+        z-index: 0;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: $base-font-size * 2;
+        background-color: darken($base-blue-color, 20%);
+        padding: $base-margin * 1.5 $base-margin * 4.5;
+        @include subtelHov;
+
+        &:hover {
+            padding: $base-margin * 2 $base-margin * 5;
+            background-color: $base-blue-color;
+        }
+    }
+}
