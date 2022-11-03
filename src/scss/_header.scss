@@ -6,7 +6,6 @@
     background-image: url("../assets/infinite-loop-01.jpg");
     background-position: center;
     background-size: auto;
-    font-family: $base-font-family;
     font-size: $base-font-size;
     font-weight: 700;
     color: white;
@@ -27,20 +26,22 @@
         left: 50%;
         transform: translateX(-50%);
         max-width: $page-max-width;
-        padding: $base-margin;
+        padding: 0 $base-margin * 2;
 
         @include mq(large) {
             flex-wrap: nowrap;
         }
 
         .nav__headtext {
+            display: block;
             flex-shrink: 0;
-            padding: $base-margin * 1.5;
+            padding: $base-margin;
+            line-height: $base-margin * 4;
             font-size: $base-font-size * 1.1;
             @include subtelHov;
 
             @include mq(xlarge) {
-                padding: $base-margin * 2;
+                padding: $base-margin * 1.5 0;
             }
         }
 
@@ -64,7 +65,7 @@
                 @include subtelHov;
 
                 @include mq(large) {
-                    padding: $base-margin * 1.5;
+                    padding: $base-margin * 2 $base-margin * 1.5;
                 }
 
                 @include mq(xlarge) {
@@ -98,6 +99,7 @@
 
         .nav__burger--mobile {
             padding: $base-margin $base-margin * 2;
+            margin: $base-margin;
             background: transparent;
             color: white;
             border: 1px solid white;
@@ -122,7 +124,7 @@
             text-shadow: 2px 2px 2px #333;
 
             .text-container__head {
-                font-size: 60px;
+                font-size: $base-font-size * 3;
                 padding: $base-margin;
             }
 
@@ -145,7 +147,7 @@
         left: 50%;
         transform: translateX(-50%);
         font-size: $base-font-size * 2;
-        background-color: darken($base-blue-color, 20%);
+        background-color: darken($base-blue-color, 15%);
         padding: $base-margin * 1.5 $base-margin * 4.5;
         @include subtelHov;
 

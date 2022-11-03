@@ -1,3 +1,79 @@
 .main {
-    height: 100vh;
+    position: relative;
+    max-width: $page-max-width;
+    margin: 5% auto;
+    min-height: 100vh;
+    padding: $base-margin * 3;
+
+    &__section {
+        .article {
+            display: flex;
+            flex-direction: column;
+
+            &__icon {
+                font-size: $base-font-size * 3;
+                color: $base-blue-color;
+                align-self: center;
+                padding: $base-margin * 3;
+            }
+
+            &__header {
+                font-size: $base-font-size * 1.5;
+                font-weight: 100;
+                color: $base-blue-color;
+                margin-bottom: $base-margin * 3;
+
+                &:first-child {
+                    font-size: $base-font-size * 2;
+                }
+            }
+
+            &__paragraph {
+                font-size: $base-font-size;
+                color: $base-font-color;
+                font-weight: 100;
+                line-height: $base-margin * 4;
+
+                &--blue {
+                    color: $base-blue-color;
+                    text-decoration: none;
+                }
+
+                &--bolder {
+                    font-weight: 700;
+                }
+            }
+
+            &__button {
+                border: none;
+                width: 150px;
+                height: 50px;
+                font-size: $base-font-size;
+                color: white;
+                background-color: darken($base-blue-color, 5%);
+                margin: $base-margin * 3 0;
+            }
+        }
+
+        @include mq(xlarge) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .article {
+                width: 45%;
+
+                &:first-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__reference {
+    }
+
+    &__gallery {
+    }
 }
