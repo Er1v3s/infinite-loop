@@ -2,7 +2,7 @@
 
 ## Instructions
 
-- Clone repo - `git clone https://github.com/Er1v3s/infinite-loop.git
+- Clone repo - `git clone https://github.com/Er1v3s/infinite-loop.git`
 - Install dependencies - `npm install`
 - Start the server - `npm start`
 - Build project - `npm run prod`
