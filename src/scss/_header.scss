@@ -2,6 +2,7 @@
     height: 100vh;
     min-height: 320px;
     position: relative;
+    background-attachment: fixed;
     background-color: $base-background-color;
     background-image: url("../assets/infinite-loop-01.jpg");
     background-position: center;

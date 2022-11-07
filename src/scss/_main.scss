@@ -1,11 +1,13 @@
 .main {
-    position: relative;
-    max-width: $page-max-width;
-    margin: 5% auto;
-    min-height: 100vh;
-    padding: $base-margin * 3;
-
     &__section {
+        position: relative;
+        min-height: 100vh;
+        padding: $base-margin * 3;
+    }
+
+    .about-section {
+        max-width: $page-max-width;
+        margin: 5% auto;
         .article {
             display: flex;
             flex-direction: column;
@@ -71,9 +73,43 @@
         }
     }
 
-    &__reference {
+    .reference-section {
+        background-attachment: fixed;
+        background-position: center;
+        background-size: auto;
+        background-image: url("../assets/infinite-loop-02-mobile.jpg");
+        @include mq(xlarge) {
+            background-image: url("../assets/infinite-loop-02.jpg");
+        }
+
+        .article {
+            &__header,
+            &__paragraph,
+            &__signature {
+                color: white;
+                text-align: center;
+            }
+
+            &__header {
+                margin-top: $base-margin * 5;
+            }
+
+            &__paragraph {
+                margin-bottom: $base-margin * 5;
+                font-size: $base-font-size * 0.75;
+                line-height: $base-font-size * 1.5;
+            }
+
+            &__signature {
+            }
+            &__image {
+                img {
+                    border-radius: 50%;
+                }
+            }
+        }
     }
 
-    &__gallery {
+    .gallery-section {
     }
 }
