@@ -1,28 +1,14 @@
 .main {
+    font-family: $base-font-family;
+
     &__section {
         position: relative;
         min-height: 100vh;
-        padding: $base-margin * 3;
-    }
 
-    .about-section {
-        max-width: $page-max-width;
-        margin: 5% auto;
         .article {
-            display: flex;
-            flex-direction: column;
-
-            &__icon {
-                font-size: $base-font-size * 3;
-                color: $base-blue-color;
-                align-self: center;
-                padding: $base-margin * 3;
-            }
-
             &__header {
                 font-size: $base-font-size * 1.5;
                 font-weight: 100;
-                color: $base-blue-color;
                 margin-bottom: $base-margin * 3;
 
                 &:first-child {
@@ -32,7 +18,6 @@
 
             &__paragraph {
                 font-size: $base-font-size;
-                color: $base-font-color;
                 font-weight: 100;
                 line-height: $base-margin * 4;
 
@@ -44,6 +29,32 @@
                 &--bolder {
                     font-weight: 700;
                 }
+            }
+        }
+    }
+
+    .about-section {
+        max-width: $page-max-width;
+        margin: 5% auto;
+        padding: $base-margin * 3;
+
+        .article {
+            display: flex;
+            flex-direction: column;
+
+            &__header {
+                color: $base-blue-color;
+            }
+
+            &__paragraph {
+                color: $base-font-color;
+            }
+
+            &__icon {
+                font-size: $base-font-size * 3;
+                color: $base-blue-color;
+                align-self: center;
+                padding: $base-margin * 3;
             }
 
             &__button {
@@ -77,34 +88,64 @@
         background-attachment: fixed;
         background-position: center;
         background-size: auto;
+        padding: $base-margin * 1.5;
         background-image: url("../assets/infinite-loop-02-mobile.jpg");
         @include mq(xlarge) {
             background-image: url("../assets/infinite-loop-02.jpg");
         }
 
         .article {
-            &__header,
-            &__paragraph,
-            &__signature {
-                color: white;
-                text-align: center;
-            }
+            color: white;
+            text-align: center;
+            margin: $base-margin * 7.5 0;
 
             &__header {
                 margin-top: $base-margin * 5;
             }
 
-            &__paragraph {
-                margin-bottom: $base-margin * 5;
+            &__paragraph-header {
                 font-size: $base-font-size * 0.75;
                 line-height: $base-font-size * 1.5;
             }
 
+            &__image {
+                margin-bottom: $base-margin * 5;
+            }
+
+            &__paragraph {
+                margin-bottom: $base-margin * 2.5;
+                font-size: $base-font-size * 0.8;
+                line-height: $base-font-size * 1.5;
+                text-align: left;
+                padding: 0 $base-margin * 4;
+            }
+
             &__signature {
+                display: block;
+                font-size: $base-font-size * 0.9;
+                font-style: italic;
+                text-align: right;
+                padding-right: $base-margin * 4;
             }
             &__image {
                 img {
                     border-radius: 50%;
+                }
+            }
+        }
+
+        &__slider-nav {
+            margin-bottom: $base-margin * 10;
+            .slider-nav__list {
+                text-align: center;
+
+                &-circle {
+                    display: inline-block;
+                    width: $base-font-size * 0.75;
+                    height: $base-font-size * 0.75;
+                    border-radius: 50%;
+                    margin: $base-margin * 0.75;
+                    background-color: rgba(255, 255, 255, 0.7);
                 }
             }
         }
