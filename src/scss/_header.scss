@@ -80,8 +80,14 @@
                 @include mq(xlarge) {
                     padding: $base-margin * 2 $base-margin * 3;
                 }
+
+                &--active {
+                    color: lighten($base-blue-color, 10%);
+                    @include subtelHov;
+                }
             }
             &-option:hover {
+                color: white;
                 background-color: darken($base-blue-color, 15%);
             }
 
