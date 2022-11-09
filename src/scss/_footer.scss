@@ -4,7 +4,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    padding: $base-margin * 10 $base-margin * 3 $base-margin * 5 $base-margin * 3;
+    padding: $margin-t-b $margin-r-l $margin-t-b / 2 $margin-r-l;
     color: white;
     font-family: $base-font-family;
     font-weight: 100;
@@ -17,12 +17,12 @@
     &__header-paragraph {
         font-size: $base-font-size * 0.9;
         text-align: center;
-        padding: $base-margin * 3 0;
+        padding: $margin-t-b / 4 0;
         line-height: $base-font-size * 2;
     }
 
     &__from-container {
-        padding: $base-margin * 4 0;
+        padding-top: $margin-t-b / 2;
 
         .form {
             font-size: $base-font-size;
@@ -33,7 +33,7 @@
                 background: transparent;
                 border: 1px solid white;
                 border-radius: 6px;
-                margin-bottom: $base-margin * 2;
+                margin-bottom: $margin-t-b / 4;
 
                 &::placeholder {
                     color: white;
@@ -45,18 +45,18 @@
                 border: none;
                 border-radius: 4px;
                 color: white;
-                padding: $base-margin $base-margin * 4;
-                margin: $base-margin * 2 0;
+                padding: $base-margin $margin-r-l * 2;
+                margin: $margin-t-b / 4 0;
             }
         }
     }
     &__contact {
         font-size: $base-font-size;
-        margin-bottom: $base-margin * 5;
+        margin-bottom: $margin-t-b / 2;
 
         .contact__item {
             display: flex;
-            margin: $base-margin * 4 0;
+            margin: $margin-t-b / 2 0;
 
             &-icon {
                 width: 75px;
@@ -64,7 +64,7 @@
             }
 
             &-text {
-                line-height: $base-font-size + $base-margin * 2;
+                line-height: $base-font-size + $margin-t-b / 4;
             }
         }
     }

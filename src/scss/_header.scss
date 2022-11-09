@@ -27,7 +27,7 @@
         left: 50%;
         transform: translateX(-50%);
         max-width: $page-max-width;
-        padding: 0 $base-margin * 2;
+        padding: $base-margin $margin-r-l;
         @include subtelHov;
 
         &--active {
@@ -44,9 +44,8 @@
         .nav__headtext {
             display: block;
             flex-shrink: 0;
-            padding: $base-margin;
-            line-height: $base-margin * 4;
             font-size: $base-font-size * 1.1;
+            transform: translateY(50%);
             @include subtelHov;
 
             @include mq(xlarge) {
@@ -114,7 +113,6 @@
 
         .nav__burger-mobile {
             padding: $base-margin $base-margin * 2;
-            margin: $base-margin;
             background: transparent;
             color: white;
             border: 1px solid white;
