@@ -98,6 +98,22 @@
         background-position: center;
         background-size: auto;
         background-image: url("../assets/infinite-loop-02-mobile.jpg");
+
+        &--active {
+            &::before {
+                @include transparetnCurtain;
+                top: 65px;
+                left: 0;
+            }
+
+            &::after {
+                @include transparetnCurtain;
+                height: 100px;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
         @include mq(xlarge) {
             background-image: url("../assets/infinite-loop-02.jpg");
         }
