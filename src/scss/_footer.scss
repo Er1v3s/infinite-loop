@@ -1,0 +1,76 @@
+.footer {
+    min-height: 100vh;
+    background-image: url("../assets/infinite-loop-03.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: $base-margin * 10 $base-margin * 3 $base-margin * 5 $base-margin * 3;
+    color: white;
+    font-family: $base-font-family;
+    font-weight: 100;
+
+    &__header {
+        font-size: $base-font-size * 2;
+        text-align: center;
+    }
+
+    &__header-paragraph {
+        font-size: $base-font-size * 0.9;
+        text-align: center;
+        padding: $base-margin * 3 0;
+        line-height: $base-font-size * 2;
+    }
+
+    &__from-container {
+        padding: $base-margin * 4 0;
+
+        .form {
+            font-size: $base-font-size;
+            &__input {
+                width: 100%;
+                color: white;
+                padding: $base-margin $base-margin * 1.5;
+                background: transparent;
+                border: 1px solid white;
+                border-radius: 6px;
+                margin-bottom: $base-margin * 2;
+
+                &::placeholder {
+                    color: white;
+                    font-weight: 100;
+                }
+            }
+            &__submit {
+                background-color: $base-blue-color;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                padding: $base-margin $base-margin * 4;
+                margin: $base-margin * 2 0;
+            }
+        }
+    }
+    &__contact {
+        font-size: $base-font-size;
+        margin-bottom: $base-margin * 5;
+
+        .contact__item {
+            display: flex;
+            margin: $base-margin * 4 0;
+
+            &-icon {
+                width: 75px;
+                font-size: 2em;
+            }
+
+            &-text {
+                line-height: $base-font-size + $base-margin * 2;
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        line-height: $base-font-size * 1.5;
+    }
+}
