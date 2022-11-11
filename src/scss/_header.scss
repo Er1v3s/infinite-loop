@@ -1,7 +1,7 @@
 .header {
+    position: relative;
     height: 100vh;
     min-height: 320px;
-    position: relative;
     background-attachment: fixed;
     background-color: $base-background-color;
     background-image: url("../assets/infinite-loop-01.jpg");
@@ -38,6 +38,7 @@
         }
 
         @include mq(large) {
+            padding: $base-margin $margin-r-l * 2;
             flex-wrap: nowrap;
         }
 
@@ -69,7 +70,7 @@
                 @include subtelHov;
 
                 @include mq(xlarge) {
-                    padding: $base-margin * 1.25 $margin-r-l;
+                    padding: $base-margin * 1.25 $margin-r-l * 2;
                 }
 
                 &--active {
@@ -80,6 +81,10 @@
             &-option:hover {
                 color: white;
                 background-color: darken($base-blue-color, 15%);
+            }
+
+            &-option:last-of-type {
+                padding-right: 0;
             }
 
             @include mq(large) {

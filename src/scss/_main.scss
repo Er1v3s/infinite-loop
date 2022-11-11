@@ -1,65 +1,35 @@
 .main {
+    position: relative;
+    max-width: $page-max-width;
+    margin: 0 auto;
     font-family: $base-font-family;
 
-    .slider-nav {
-        .slider-nav__list {
-            text-align: center;
-
-            &-circle {
-                display: inline-block;
-                width: $base-font-size * 0.75;
-                height: $base-font-size * 0.75;
-                border-radius: 50%;
-                margin: $base-margin * 0.75;
-                background-color: rgba(150, 150, 150, 0.7);
-
-                &--active {
-                    background-color: rgba(220, 220, 220, 1);
-                }
-            }
-        }
-    }
-
-    &__section {
-        position: relative;
+    &__article {
         min-height: 100vh;
         padding: $margin-t-b $margin-r-l;
 
-        .article {
-            &__header {
-                font-size: $base-font-size * 1.5;
-                font-weight: 100;
-                margin-bottom: $margin-t-b / 4;
-                color: $base-blue-color;
+        @include mq(large) {
+            padding: $base-margin $margin-r-l * 2;
+        }
 
-                &:first-child {
-                    font-size: $base-font-size * 2;
-                }
+        .article-header {
+            &__title {
+                @include articleHeader;
             }
 
             &__paragraph {
-                font-size: $base-font-size;
-                font-weight: 100;
-                line-height: $base-margin * 4;
-                color: $base-font-color;
-
-                &--blue {
-                    color: $base-blue-color;
-                    text-decoration: none;
-                }
-
-                &--bolder {
-                    font-weight: 700;
-                }
+                @include articleParagraph;
             }
         }
     }
 
-    .about-section {
-        max-width: $page-max-width;
-        margin: 0 auto;
-
-        .article {
+    .article-about {
+        .article-header {
+            &__title {
+                text-align: left;
+            }
+        }
+        .section {
             display: flex;
             flex-direction: column;
 
@@ -68,6 +38,15 @@
                 color: $base-blue-color;
                 align-self: center;
                 padding: $base-margin * 3;
+            }
+
+            &__header {
+                @include articleHeader;
+                font-size: $base-font-size * 1.5;
+            }
+
+            &__paragraph {
+                @include articleParagraph;
             }
 
             &__button {
@@ -87,7 +66,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
 
-            .article {
+            .section {
                 width: 45%;
 
                 &:first-child {
@@ -97,13 +76,17 @@
         }
     }
 
-    .reference-section {
+    .article-reference {
+        // position: relative;
         background-attachment: fixed;
         background-position: center;
         background-size: auto;
         background-image: url("../assets/infinite-loop-02-mobile.jpg");
-        position: relative;
         width: 100%;
+
+        @include mq(xlarge) {
+            background-image: url("../assets/infinite-loop-02.jpg");
+        }
 
         &--active {
             &::before {
@@ -120,43 +103,40 @@
             }
         }
 
-        @include mq(xlarge) {
-            background-image: url("../assets/infinite-loop-02.jpg");
+        .article-header {
+            margin-top: $margin-t-b / 2;
+            margin-bottom: $margin-t-b;
+
+            &__title {
+                @include articleHeader;
+                color: white;
+            }
+            &__paragraph {
+                color: white;
+                font-size: $base-font-size * 0.75;
+                line-height: $base-font-size * 1.5;
+            }
         }
 
-        .article {
-            &__wrapper {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
+        .section__wrapper {
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
 
-                margin: 0 auto;
-                position: relative;
-                overflow: hidden;
-
-                &-item {
-                    flex-shrink: 0;
-                    width: 100%;
-                }
-            }
-
+        .section {
+            width: 100%;
+            flex-shrink: 0;
             color: white;
             text-align: center;
             margin-bottom: $margin-t-b / 2;
 
-            &__header {
-                color: white;
-                margin-top: $margin-t-b / 2;
-            }
-
-            &__header-paragraph {
-                font-size: $base-font-size * 0.75;
-                line-height: $base-font-size * 1.5;
-            }
-
             &__image {
-                margin-top: $margin-t-b;
                 margin-bottom: $margin-t-b / 2;
+
+                img {
+                    border-radius: 50%;
+                }
             }
 
             &__paragraph {
@@ -165,7 +145,6 @@
                 line-height: $base-font-size * 1.5;
                 text-align: left;
                 padding: 0 $margin-r-l / 4;
-                color: white;
             }
 
             &__signature {
@@ -174,27 +153,43 @@
                 font-style: italic;
                 text-align: right;
             }
-            &__image {
-                img {
-                    border-radius: 50%;
-                }
-            }
         }
     }
 
-    .gallery-section {
-        .article {
-            text-align: center;
+    .article-gallery {
+        text-align: center;
 
+        .article-header {
             &__paragraph {
                 font-size: $base-font-size * 0.75;
                 line-height: $base-font-size * 1.5;
                 color: lighten($base-font-color, 10%);
                 margin-bottom: $base-margin * 7.5;
             }
+        }
 
+        .section {
             &__image-wrapper {
                 margin-bottom: $base-margin * 1.5;
+            }
+        }
+    }
+
+    .slider-nav {
+        .slider-nav__list {
+            text-align: center;
+
+            &-circle {
+                display: inline-block;
+                width: $base-font-size * 0.75;
+                height: $base-font-size * 0.75;
+                border-radius: 50%;
+                margin: $base-margin * 0.75;
+                background-color: rgba(150, 150, 150, 0.7);
+
+                &--active {
+                    background-color: rgba(220, 220, 220, 1);
+                }
             }
         }
     }

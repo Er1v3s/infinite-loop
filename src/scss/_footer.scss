@@ -9,13 +9,17 @@
     font-family: $base-font-family;
     font-weight: 100;
 
+    @include mq(large) {
+        padding: $base-margin $margin-r-l * 2 $margin-t-b / 2 $margin-r-l * 2;
+    }
+
     &__header {
         font-size: $base-font-size * 2;
         text-align: center;
     }
 
     &__header-paragraph {
-        font-size: $base-font-size * 0.9;
+        font-size: $base-font-size * 0.95;
         text-align: center;
         padding: $margin-t-b / 4 0;
         line-height: $base-font-size * 2;
@@ -50,6 +54,7 @@
             }
         }
     }
+
     &__contact {
         font-size: $base-font-size;
         margin-bottom: $margin-t-b / 2;
@@ -59,8 +64,9 @@
             margin: $margin-t-b / 2 0;
 
             &-icon {
+                text-align: center;
                 width: 75px;
-                font-size: 2em;
+                font-size: $base-font-size * 2;
             }
 
             &-text {

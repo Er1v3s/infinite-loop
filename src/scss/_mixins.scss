@@ -3,6 +3,30 @@
     transition: 0.3s;
 }
 
+@mixin articleHeader {
+    font-size: $base-font-size * 2;
+    font-weight: 100;
+    margin-bottom: $margin-t-b / 4;
+    color: $base-blue-color;
+    text-align: center;
+}
+
+@mixin articleParagraph {
+    font-size: $base-font-size;
+    font-weight: 100;
+    line-height: $base-margin * 4;
+    color: $base-font-color;
+
+    &--blue {
+        color: $base-blue-color;
+        text-decoration: none;
+    }
+
+    &--bolder {
+        font-weight: 700;
+    }
+}
+
 @mixin transparetnCurtain {
     content: " ";
     display: block;
