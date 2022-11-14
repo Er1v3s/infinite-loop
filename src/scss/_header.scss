@@ -26,7 +26,6 @@
         width: 100%;
         left: 50%;
         transform: translateX(-50%);
-        max-width: $page-max-width;
         padding: $base-margin $margin-r-l;
         @include subtelHov;
 
@@ -40,6 +39,7 @@
         @include mq(large) {
             padding: $base-margin $margin-r-l * 2;
             flex-wrap: nowrap;
+            justify-content: center;
         }
 
         .nav__headtext {
@@ -48,6 +48,10 @@
             font-size: $base-font-size * 1.1;
             transform: translateY(50%);
             @include subtelHov;
+
+            @include mq(large) {
+                width: 140px;
+            }
         }
 
         .nav__headtext:hover {
@@ -64,6 +68,10 @@
             color: #333;
             text-align: right;
             font-weight: 100;
+
+            @include mq(large) {
+                width: 1000px;
+            }
 
             &-option {
                 padding: $base-margin * 1.25 $base-margin * 1.5;
@@ -83,18 +91,17 @@
                 background-color: darken($base-blue-color, 15%);
             }
 
-            &-option:last-of-type {
-                padding-right: 0;
-            }
-
             @include mq(large) {
                 display: flex;
-                flex-grow: 1;
                 justify-content: flex-end;
                 order: 0;
                 margin-top: 0;
                 background: transparent;
                 color: white;
+
+                &-option:last-of-type {
+                    padding-right: 0;
+                }
             }
         }
 
