@@ -4,13 +4,13 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    padding: $margin-t-b $margin-r-l $margin-t-b / 2 $margin-r-l;
+    padding: $margin-t-b $margin-r-l $lower-margin-t-b $margin-r-l;
     color: white;
     font-family: $base-font-family;
     font-weight: 100;
 
     @include mq(large) {
-        padding: $base-margin $margin-r-l * 2 $margin-t-b / 2 $margin-r-l * 2;
+        padding: $margin-t-b $wide-screen-margin-r-l $the-lowest-margin-t-b $wide-screen-margin-r-l;
     }
 
     &__header {
@@ -21,12 +21,12 @@
     &__header-paragraph {
         font-size: $base-font-size * 0.95;
         text-align: center;
-        padding: $margin-t-b / 4 0;
+        padding: $the-lowest-margin-t-b 0;
         line-height: $base-font-size * 2;
     }
 
     &__from-container {
-        padding-top: $margin-t-b / 2;
+        padding-top: $lower-margin-t-b;
 
         .form {
             font-size: $base-font-size;
@@ -37,7 +37,7 @@
                 background: transparent;
                 border: 1px solid white;
                 border-radius: 6px;
-                margin-bottom: $margin-t-b / 4;
+                margin-bottom: $the-lowest-margin-t-b;
 
                 &::placeholder {
                     color: white;
@@ -50,18 +50,18 @@
                 border-radius: 4px;
                 color: white;
                 padding: $base-margin $margin-r-l * 2;
-                margin: $margin-t-b / 4 0;
+                margin: $the-lowest-margin-t-b 0;
             }
         }
     }
 
     &__contact {
         font-size: $base-font-size;
-        margin-bottom: $margin-t-b / 2;
+        margin-bottom: $lower-margin-t-b;
 
         .contact__item {
             display: flex;
-            margin: $margin-t-b / 2 0;
+            margin: $lower-margin-t-b 0;
 
             &-icon {
                 text-align: center;
@@ -70,7 +70,7 @@
             }
 
             &-text {
-                line-height: $base-font-size + $margin-t-b / 4;
+                line-height: $base-font-size + $the-lowest-margin-t-b;
             }
         }
     }

@@ -6,4 +6,7 @@ $base-blue-color: #37a;
 $base-background-color: rgb(112, 112, 112);
 $base-margin: 10px;
 $margin-r-l: 15px;
+$wide-screen-margin-r-l: $margin-r-l * 2;
 $margin-t-b: 100px;
+$lower-margin-t-b: $margin-t-b / 2;
+$the-lowest-margin-t-b: $lower-margin-t-b / 2;

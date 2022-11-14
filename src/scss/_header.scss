@@ -37,7 +37,7 @@
         }
 
         @include mq(large) {
-            padding: $base-margin $margin-r-l * 2;
+            padding: $base-margin $wide-screen-margin-r-l;
             flex-wrap: nowrap;
             justify-content: center;
         }
@@ -78,7 +78,7 @@
                 @include subtelHov;
 
                 @include mq(xlarge) {
-                    padding: $base-margin * 1.25 $margin-r-l * 2;
+                    padding: $base-margin * 1.25 $wide-screen-margin-r-l;
                 }
 
                 &--active {
