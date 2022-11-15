@@ -34,6 +34,11 @@
             color: $base-blue-color;
             border-bottom: 1px solid #e9ecef;
             @include subtelHov;
+
+            & > div > div {
+                color: lighten($base-blue-color, 10%);
+                @include subtelHov;
+            }
         }
 
         @include mq(large) {
@@ -82,7 +87,8 @@
                 }
 
                 &--active {
-                    color: lighten($base-blue-color, 10%);
+                    background-color: $base-blue-color;
+                    color: white;
                     @include subtelHov;
                 }
             }
@@ -98,10 +104,6 @@
                 margin-top: 0;
                 background: transparent;
                 color: white;
-
-                &-option:last-of-type {
-                    padding-right: 0;
-                }
             }
         }
 
