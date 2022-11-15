@@ -1,7 +1,5 @@
 .main {
     position: relative;
-    max-width: $page-max-width;
-    margin: 0 auto;
     font-family: $base-font-family;
 
     &__article {
@@ -23,7 +21,16 @@
         }
     }
 
+    &__article {
+        @include container;
+    }
+
     .article-about {
+        & > section,
+        header {
+            padding: $the-lowest-margin-t-b 0;
+        }
+
         .article-header {
             &__title {
                 text-align: left;
@@ -37,7 +44,7 @@
                 font-size: $base-font-size * 3;
                 color: $base-blue-color;
                 align-self: center;
-                padding: $base-margin * 3;
+                padding: $the-lowest-margin-t-b;
             }
 
             &__header {
@@ -47,6 +54,9 @@
 
             &__paragraph {
                 @include articleParagraph;
+                @include mq(large) {
+                    margin-bottom: $the-lowest-margin-t-b;
+                }
             }
 
             &__button {
@@ -56,7 +66,10 @@
                 font-size: $base-font-size;
                 color: white;
                 background-color: darken($base-blue-color, 5%);
-                margin: $base-margin * 3 0;
+                margin-top: $lower-margin-t-b;
+                @include mq(large) {
+                    margin-top: auto;
+                }
             }
         }
 
@@ -77,12 +90,17 @@
     }
 
     .article-reference {
+        max-width: none;
         // position: relative;
         background-attachment: fixed;
         background-position: center;
         background-size: auto;
         background-image: url("../assets/infinite-loop-02-mobile.jpg");
         width: 100%;
+
+        &__container {
+            @include container;
+        }
 
         @include mq(xlarge) {
             background-image: url("../assets/infinite-loop-02.jpg");
@@ -104,7 +122,6 @@
         }
 
         .article-header {
-            margin-top: $lower-margin-t-b;
             margin-bottom: $margin-t-b;
 
             &__title {
@@ -112,9 +129,14 @@
                 color: white;
             }
             &__paragraph {
+                text-align: center;
+                margin: 0 auto;
                 color: white;
                 font-size: $base-font-size * 0.75;
                 line-height: $base-font-size * 1.5;
+                @include mq(large) {
+                    width: 60%;
+                }
             }
         }
 
@@ -161,10 +183,15 @@
 
         .article-header {
             &__paragraph {
+                text-align: center;
+                margin: 0 auto;
                 font-size: $base-font-size * 0.75;
                 line-height: $base-font-size * 1.5;
                 color: lighten($base-font-color, 10%);
                 margin-bottom: $base-margin * 7.5;
+                @include mq(large) {
+                    width: 60%;
+                }
             }
         }
 

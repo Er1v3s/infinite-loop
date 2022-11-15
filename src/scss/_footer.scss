@@ -4,13 +4,13 @@
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    padding: $margin-t-b $margin-r-l $lower-margin-t-b $margin-r-l;
     color: white;
     font-family: $base-font-family;
     font-weight: 100;
 
-    @include mq(large) {
-        padding: $margin-t-b $wide-screen-margin-r-l $the-lowest-margin-t-b $wide-screen-margin-r-l;
+    &__container {
+        @include container;
+        padding: $margin-t-b $margin-r-l $lower-margin-t-b $margin-r-l;
     }
 
     &__header {
@@ -45,6 +45,7 @@
                 }
             }
             &__submit {
+                width: 50%;
                 background-color: $base-blue-color;
                 border: none;
                 border-radius: 4px;
@@ -78,5 +79,36 @@
     &__copyright {
         text-align: center;
         line-height: $base-font-size * 1.5;
+    }
+
+    @include mq(large) {
+        &__container {
+            padding: $margin-t-b $wide-screen-margin-r-l $the-lowest-margin-t-b $wide-screen-margin-r-l;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        & > * {
+            flex: 1 100%;
+        }
+
+        &__from-container {
+            flex: 1 55%;
+            margin-bottom: $lower-margin-t-b;
+            padding: $the-lowest-margin-t-b $margin-r-l;
+            @include mq(xlarge) {
+                flex-basis: 60%;
+                padding: $lower-margin-t-b $wide-screen-margin-r-l;
+            }
+        }
+
+        &__contact {
+            flex: 1 45%;
+            padding: 0 $margin-r-l;
+            @include mq(xlarge) {
+                flex-basis: 40%;
+                padding: $the-lowest-margin-t-b $wide-screen-margin-r-l;
+            }
+        }
     }
 }

@@ -1,3 +1,14 @@
+@mixin container {
+    max-width: $page-max-width;
+    margin: 0 auto;
+    padding-left: $margin-r-l;
+    padding-right: $margin-r-l;
+    @include mq(large) {
+        padding-left: $wide-screen-margin-r-l;
+        padding-right: $wide-screen-margin-r-l;
+    }
+}
+
 @mixin subtelHov {
     cursor: pointer;
     transition: 0.3s;
