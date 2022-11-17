@@ -29,9 +29,3 @@ const style = document.head.appendChild(document.createElement("style"));
 //     articleReferenceHandle.classList.remove("article-reference--active");
 //   }
 // });
-
-class Scroller {
-  constructor() {
-    this.article = document.querySelector("");
-  }
-}
