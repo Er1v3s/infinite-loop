@@ -1,0 +1,14 @@
+.swiper-pagination,
+.swiper-pagination2 {
+    .swiper-pagination-bullet {
+        display: inline-block;
+        width: $base-font-size * 0.75;
+        height: $base-font-size * 0.75;
+        border-radius: 50%;
+        margin: $base-margin * 0.75;
+        background-color: rgba(150, 150, 150, 0.7);
+        &-active {
+            background-color: rgba(220, 220, 220, 1);
+        }
+    }
+}

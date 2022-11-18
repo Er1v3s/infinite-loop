@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -124,60 +125,56 @@
                     </p>
                 </header>
 
-                <div class="article-reference__section section__wrapper">
-                    <section class="article-reference__section section__wrapper-item section">
-                        <div class="section__image">
-                            <img src="assets/testimonial-img-01.jpg" alt="">
-                        </div>
-                        <p class="section__paragraph">
-                            This background image includes a semi-transparent overlay layer. This article also has a
-                            parallax
-                            image effect.
-                        </p>
-                        <span class="section__signature">
-                            Catherine Win (Designer)
-                        </span>
-                    </section>
+                <div class="swiper">
+                    <div class="article-reference__section section__wrapper swiper-wrapper">
+                        <section class="article-reference__section section__wrapper-item section swiper-slide">
+                            <div class="section__image">
+                                <img src="assets/testimonial-img-01.jpg" alt="">
+                            </div>
+                            <p class="section__paragraph">
+                                This background image includes a semi-transparent overlay layer. This article also has a
+                                parallax
+                                image effect.
+                            </p>
+                            <span class="section__signature">
+                                Catherine Win (Designer)
+                            </span>
+                        </section>
 
-                    <section class="article-reference__section section__wrapper-item section">
-                        <div class="section__image">
-                            <img src="assets/testimonial-img-02.jpg" alt="">
-                        </div>
-                        <p class="section__paragraph">
-                            Testimonial article comes with carousel items. You can use Infinite Loop HTML CSS template
-                            for
-                            your
-                            website.
-                        </p>
-                        <span class="section__signature">
-                            Dual Rocker (CEO)
-                        </span>
-                    </section>
+                        <section class="article-reference__section section__wrapper-item section swiper-slide">
+                            <div class="section__image">
+                                <img src="assets/testimonial-img-02.jpg" alt="">
+                            </div>
+                            <p class="section__paragraph">
+                                Testimonial article comes with carousel items. You can use Infinite Loop HTML CSS
+                                template
+                                for
+                                your
+                                website.
+                            </p>
+                            <span class="section__signature">
+                                Dual Rocker (CEO)
+                            </span>
+                        </section>
 
-                    <section class="article-reference__section section__wrapper-item section">
-                        <div class="section__image">
-                            <img src="assets/testimonial-img-03.jpg" alt="">
-                        </div>
-                        <p class="section__paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ullam dolorem,
-                            explicabo
-                            fugit
-                            eius dolorum. Commodi id perferendis odio, sunt inventore dignissimos.
-                        </p>
-                        <span class="section__signature">
-                            Sandra Soft (Marketing)
-                        </span>
-                    </section>
-                </div>
+                        <section class="article-reference__section section__wrapper-item section swiper-slide">
+                            <div class="section__image">
+                                <img src="assets/testimonial-img-03.jpg" alt="">
+                            </div>
+                            <p class="section__paragraph">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ullam dolorem,
+                                explicabo
+                                fugit
+                                eius dolorum. Commodi id perferendis odio, sunt inventore dignissimos.
+                            </p>
+                            <span class="section__signature">
+                                Sandra Soft (Marketing)
+                            </span>
+                        </section>
+                    </div>
 
-                <div class="article-reference__slider-nav slider-nav">
-                    <ul class="slider-nav__list">
-                        <li class="slider-nav__list-circle slider-nav__list-circle--active"></li>
-                        <li class="slider-nav__list-circle"></li>
-                        <li class="slider-nav__list-circle"></li>
-                        <li class="slider-nav__list-circle"></li>
-                        <li class="slider-nav__list-circle"></li>
-                    </ul>
+                    <div class="article-reference__slider-nav slider-nav swiper-pagination">
+                    </div>
                 </div>
             </div>
         </article>
@@ -191,36 +188,32 @@
                     metus lacinia, sed iaculis
                     nibh semper. Pellentesque est urna, lobortis eu arcu a, aliquet tristique urna.</p>
             </header>
-            <section class="article-gallery__section section">
-                <div class="section__image-wrapper">
-                    <img src="assets/gallery-tn-01.jpg" alt="">
-                </div>
-                <!-- <div class="section__image-wrapper">
-                    <img src="assets/gallery-tn-02.jpg" alt="">
-                </div>
-                <div class="section__image-wrapper">
-                    <img src="assets/gallery-tn-03.jpg" alt="">
-                </div>
-                <div class="section__image-wrapper">
-                    <img src="assets/gallery-tn-04.jpg" alt="">
-                </div>
-                <div class="section__image-wrapper">
-                    <img src="assets/gallery-tn-05.jpg" alt="">
-                </div>
-                <div class="section__image-wrapper">
-                    <img src="assets/gallery-tn-06.jpg" alt="">
-                </div> -->
+            <div class="swiper2">
+                <section class="article-gallery__section section swiper-wrapper">
+                    <div class="section__image-wrapper swiper-slide">
+                        <img src="assets/gallery-tn-01.jpg" alt="">
+                    </div>
+                    <div class="section__image-wrapper swiper-slide">
+                        <img src="assets/gallery-tn-02.jpg" alt="">
+                    </div>
+                    <div class="section__image-wrapper swiper-slide">
+                        <img src="assets/gallery-tn-03.jpg" alt="">
+                    </div>
+                    <div class="section__image-wrapper swiper-slide">
+                        <img src="assets/gallery-tn-04.jpg" alt="">
+                    </div>
+                    <div class="section__image-wrapper swiper-slide">
+                        <img src="assets/gallery-tn-05.jpg" alt="">
+                    </div>
+                    <div class="section__image-wrapper swiper-slide">
+                        <img src="assets/gallery-tn-06.jpg" alt="">
+                    </div>
+                </section>
 
-                <div class="article-gallery__slider-nav slider-nav">
-                    <ul class="slider-nav__list">
-                        <li class="slider-nav__list-circle"></li>
-                        <li class="slider-nav__list-circle"></li>
-                        <li class="slider-nav__list-circle"></li>
-                        <li class="slider-nav__list-circle"></li>
-                        <li class="slider-nav__list-circle"></li>
-                    </ul>
+                <div class="article-gallery__slider-nav slider-nav swiper-pagination2">
                 </div>
-            </section>
+
+            </div>
 
         </article>
     </main>
@@ -271,5 +264,74 @@
     </footer>
 
 </body>
+
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+
+    let swiperParams = {
+        slidesPerView: 1,
+        direction: "horizontal",
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        autoplay: {
+            delay: 5000,
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+            }
+        },
+    };
+
+    let swiper2Params = {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        direction: "horizontal",
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination2',
+            clickable: true,
+        },
+
+        autoplay: {
+            delay: 5000,
+        },
+
+        breakpoints: {
+            425: {
+                slidesPerView: 1,
+            },
+            500: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 75,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 0
+            },
+            1440: {
+                slidesPerView: 4,
+            },
+        },
+    }
+
+    window.addEventListener("DOMContentLoaded", function () {
+        let swiper = new Swiper('.swiper', swiperParams)
+        let swiper2 = new Swiper('.swiper2', swiper2Params)
+    })
+
+</script>
 
 </html>
