@@ -13,15 +13,26 @@
 
 <body id="rootEl">
 
-    <header class="header scrollElement">
+    <header class="header scrollElement" id="header">
         <nav class="header__nav nav">
             <div class="nav__headtext">Infinite Loop</div>
             <div class="nav__options">
-                <div class="nav__options-option">Home</div>
-                <div class="nav__options-option">What We Do</div>
-                <div class="nav__options-option">Testimonials</div>
-                <div class="nav__options-option">Gallery</div>
-                <div class="nav__options-option">Contact</div>
+                <a class="nav__options-link" href="#header">
+                    <div class="nav__options-option">Home</div>
+                </a>
+                <a class="nav__options-link" href="#article-about">
+                    <div class="nav__options-option">What We Do</div>
+                </a>
+                <a class="nav__options-link" href="#article-reference">
+                    <div class="nav__options-option">Testimonials</div>
+                </a>
+                <a class="nav__options-link" href="#article-gallery">
+                    <div class="nav__options-option">Gallery</div>
+                </a>
+                <a class="nav__options-link" href="#footer">
+                    <div class="nav__options-option">Contact</div>
+                </a>
+
             </div>
             <button class="nav__burger-mobile">
                 <i class="fa-solid fa-bars"></i>
@@ -44,7 +55,7 @@
     </header>
 
     <main class="main">
-        <article class="main__article article-about scrollElement">
+        <article class="main__article article-about scrollElement" id="article-about">
             <!-- WHAT WE DO -->
             <header class="article-about__article-header article-header">
                 <h2 class="article-header__title">What We Do</h2>
@@ -102,7 +113,7 @@
             </section>
         </article>
 
-        <article class="main__article article-reference scrollElement">
+        <article class="main__article article-reference scrollElement" id="article-reference">
             <!-- TESTIMONIALS -->
             <div class="article-reference__container article-reference">
                 <header class="article-reference__article-header article-header">
@@ -171,7 +182,7 @@
             </div>
         </article>
 
-        <article class="main__article article-gallery scrollElement">
+        <article class="main__article article-gallery scrollElement" id="article-gallery">
             <!-- GALERY -->
             <header class="article-gallery__article-header article-header">
                 <h2 class="article-header__title">Gallery</h2>
@@ -214,7 +225,7 @@
         </article>
     </main>
 
-    <footer class="footer scrollElement">
+    <footer class="footer scrollElement" id="footer">
         <div class="footer__container footer">
             <div class="footer__header">
                 <h2 class="footer__header-title">Contact Us</h2>
