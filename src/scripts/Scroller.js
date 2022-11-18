@@ -1,50 +1,38 @@
-class Scroller {
+export default class Scroller {
   constructor() {
-    this.header = document.querySelector(".header");
-    this.articleAbout = document.querySelector(".article-about");
-    this.articleReference = document.querySelector(".article-reference");
-    this.articleGallery = document.querySelector(".article-gallery");
-    this.footer = document.querySelector(".footer");
-    const bodySelectorsArray = [
-      this.header,
-      this.articleAbout,
-      this.articleReference,
-      this.articleGallery,
-      this.footer,
-    ];
-    this.userIsScrolling = false;
-
+    this.scrollElement = document.querySelectorAll(".scrollElement");
+    this.scrollElementArray = [...this.scrollElement];
+    this.navbar = document.querySelector(".header__nav");
     this.nav = document.querySelectorAll(".nav__options-option");
     this.navItemsArray = [...this.nav];
-
-    this.currentPositionIndex = bodySelectorsArray.findIndex(
-      this.isScroledIntoView
-    );
-    this.isScroledIntoView(this.bodySelectorsArray[0]);
   }
 
-  listenScroll = () => {
-    if (this.userIsScrolling) return;
-    this.userIsScrolling = true;
+  // return index of visible element from array
+  scroll() {
+    this.scrollElementArray.forEach((item, index) => {
+      if (this.isScroledIntoView(item) === true) {
+        this.currentIndex = index;
+      }
+    });
+    return this.currentIndex;
+  }
 
-    setTimeout(() => {
-      this.userIsScrolling = false;
-    }, 500);
-  };
-
+  // return true if our view is between this top and bottom block element
   isScroledIntoView(element) {
     const rect = element.getBoundingClientRect();
     const elementTop = rect.top;
     const elementBottom = rect.bottom;
-
-    const isVisible = elementTop >= 0 && elementBottom <= window.innerHeight;
+    const isVisible =
+      elementTop <= this.navbar.clientHeight &&
+      elementBottom >= window.innerHeight;
 
     return isVisible;
   }
 
+  // add styles for the active item and delete for inactive
   selectActiveItem() {
-    navItemsArray.forEach(item, (index) => {
-      if (index === this.currentPositionIndex) {
+    this.navItemsArray.forEach((item, index) => {
+      if (index === this.scroll() && window.scrollY >= 1) {
         item.classList.add("nav__options-option--active");
       } else item.classList.remove("nav__options-option--active");
     });
