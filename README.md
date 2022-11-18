@@ -1,4 +1,4 @@
-# myTemplate
+# Infinite-loop - project created based on https://www.tooplate.com/view/2117-infinite-loop looking only at layout, not at code (so they may be a little different)
 
 ## Instructions
 
@@ -14,3 +14,4 @@
 - BEM
 - JavaScript
 - Webpack 5
+- SwiperJS
