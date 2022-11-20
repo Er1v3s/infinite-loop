@@ -36,7 +36,7 @@
             @include subtelHov;
 
             & > div > div {
-                color: lighten($base-blue-color, 10%);
+                color: $base-blue-color;
                 @include subtelHov;
             }
         }
@@ -108,7 +108,7 @@
                 }
 
                 &--active {
-                    background-color: $base-blue-color;
+                    background-color: darken($base-blue-color, 15%);
                     color: white;
                     @include subtelHov;
                 }
