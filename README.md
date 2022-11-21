@@ -11,7 +11,6 @@
 
 - HTML
 - SASS/CSS
-- BEM
 - JavaScript
 - Webpack 5
-- SwiperJS
+- My own template, which is located on my github
