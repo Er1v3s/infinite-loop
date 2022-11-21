@@ -67,6 +67,12 @@
                 color: white;
                 background-color: darken($base-blue-color, 5%);
                 margin-top: $lower-margin-t-b;
+                @include subtelHov;
+
+                &:hover {
+                    background-color: lighten($base-blue-color, 5%);
+                }
+
                 @include mq(large) {
                     margin-top: auto;
                 }
@@ -91,7 +97,6 @@
 
     .article-reference {
         max-width: none;
-        // position: relative;
         background-attachment: fixed;
         background-position: center;
         background-size: auto;

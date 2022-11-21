@@ -79,24 +79,7 @@
             }
 
             &-link {
-                text-decoration: none;
-
-                &:link,
-                &:visited,
-                &:active {
-                    color: $base-blue-color;
-                    @include mq(large) {
-                        color: white;
-                    }
-                }
-
-                &--active {
-                    &:link,
-                    &:visited,
-                    &:active {
-                        color: lighten($base-blue-color, 10%);
-                    }
-                }
+                @include link;
             }
 
             &-option {
@@ -204,5 +187,9 @@
         @media (orientation: landscape) {
             bottom: 5%;
         }
+    }
+
+    &__nav-link {
+        @include link;
     }
 }

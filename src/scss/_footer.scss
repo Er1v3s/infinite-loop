@@ -52,6 +52,10 @@
                 color: white;
                 padding: $base-margin $margin-r-l * 2;
                 margin: $the-lowest-margin-t-b 0;
+
+                &:hover {
+                    background-color: lighten($base-blue-color, 5%);
+                }
             }
         }
     }
@@ -63,6 +67,8 @@
         .contact__item {
             display: flex;
             margin: $lower-margin-t-b 0;
+            cursor: pointer;
+            @include subtelHov;
 
             &-icon {
                 text-align: center;
@@ -72,6 +78,10 @@
 
             &-text {
                 line-height: $base-font-size + $the-lowest-margin-t-b;
+            }
+
+            &:hover {
+                color: $base-blue-color;
             }
         }
     }

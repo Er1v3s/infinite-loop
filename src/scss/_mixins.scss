@@ -14,6 +14,27 @@
     transition: 0.3s;
 }
 
+@mixin link {
+    text-decoration: none;
+
+    &:link,
+    &:visited,
+    &:active {
+        color: $base-blue-color;
+        @include mq(large) {
+            color: white;
+        }
+    }
+
+    &--active {
+        &:link,
+        &:visited,
+        &:active {
+            color: $base-blue-color;
+        }
+    }
+}
+
 @mixin articleHeader {
     font-size: $base-font-size * 2;
     font-weight: 100;
