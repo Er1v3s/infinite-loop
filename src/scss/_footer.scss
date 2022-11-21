@@ -52,9 +52,10 @@
                 color: white;
                 padding: $base-margin $margin-r-l * 2;
                 margin: $the-lowest-margin-t-b 0;
+                @include subtelHov;
 
                 &:hover {
-                    background-color: lighten($base-blue-color, 5%);
+                    background-color: lighten($base-blue-color, 10%);
                 }
             }
         }
