@@ -11,8 +11,9 @@ module.exports = {
     main: "./src/index.js",
   },
   output: {
-    filename: "js/[name]-[contenthash:6].js",
+    filename: "./[name]-[contenthash:6].js",
     path: path.join(__dirname, "./dist"),
+    assetModuleFilename: "assets/[name][ext][query]",
   },
 
   module: {
@@ -29,12 +30,14 @@ module.exports = {
       },
       {
         test: /\.(png|jp(e*)g|svg)$/,
+        dependency: { not: ["url"] },
+        type: "asset/resource",
         use: [
           {
             loader: "file-loader",
             options: {
-              name: "[name]-[contenthash:6].[ext]",
               outputPath: "./assets",
+              name: "[name].[ext]",
               publicPath: "./assets",
             },
           },
@@ -48,6 +51,7 @@ module.exports = {
             },
           },
         ],
+        type: "javascript/auto",
       },
       {
         test: /\.js$/,
