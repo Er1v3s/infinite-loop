@@ -1,4 +1,6 @@
-# Infinite-loop - project created based on https://www.tooplate.com/view/2117-infinite-loop looking only at layout, not at code (so they may be a little different)
+## Live preview - **https://er1v3s.github.io/infinite-loop**
+
+### Infinite-loop - project created based on https://www.tooplate.com/view/2117-infinite-loop looking only at layout, not at code (so they may be a little different)
 
 ## Instructions
 
@@ -6,11 +8,3 @@
 - Install dependencies - `npm install`
 - Start the server - `npm start`
 - Build project - `npm run prod`
-
-## Project created using:
-
-- HTML
-- SASS/CSS
-- JavaScript
-- Webpack 5
-- My own template, which is located on my github
